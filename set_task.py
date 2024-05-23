@@ -215,3 +215,22 @@ print ('---')
 # zbiór par (x, y) dla liczb x i y z zakresu od 1 do 5, gdzie suma x + y jest parzysta
 pairs = {(x, y) for x in range(1, 6) for y in range(1, 6) if (x + y) % 2 == 0}
 print(pairs)
+
+print('---')
+
+students = {
+    'Jan': {'math': 85, 'science': 92, 'english': 78},
+    'Filip': {'math': 75, 'science': 65, 'english': 82, 'history': 70},
+    'Ola': {'math': 95, 'science': 100, 'english': 100, 'history': 90},
+    'Dawid': {'math': 55, 'science': 58, 'english': 60},
+    'Ewa': {'math': 88, 'science': 85, 'english': 90, 'history': 92, 'art': 77}
+}
+
+passing_score = 70
+
+passed_students = {
+    student for student, grades in students.items()
+    if sum(1 for score in grades.values() if score >= passing_score) >= 3
+}
+
+print(passed_students)
