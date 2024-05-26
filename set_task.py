@@ -209,3 +209,9 @@ print(filter_blood_pressure_results)
 # zbiór kwadratów liczb od 1 do 10
 squares = {x**2 for x in range(1, 11)}
 print(squares)
+
+print ('---')
+
+# zbiór par (x, y) dla liczb x i y z zakresu od 1 do 5, gdzie suma x + y jest parzysta
+pairs = {(x, y) for x in range(1, 6) for y in range(1, 6) if (x + y) % 2 == 0}
+print(pairs)
