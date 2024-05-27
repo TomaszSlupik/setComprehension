@@ -205,4 +205,7 @@ numbRangeDiastolic = list(range(rangeDiastolic[0], rangeDiastolic[1] + 1))
 
 filter_blood_pressure_results = [blood for blood in blood_pressure_results if blood['systolic'] in numbRangeSystolic and blood['diastolic'] in numbRangeDiastolic]
 print(filter_blood_pressure_results)
-       
+
+# zbiór kwadratów liczb od 1 do 10
+squares = {x**2 for x in range(1, 11)}
+print(squares)
